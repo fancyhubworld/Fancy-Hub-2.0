@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /shop
+Allow: /product/*
+Allow: /category/*
+Allow: /vendor/*
+Allow: /custom-print
+Disallow: /admin/
+Disallow: /vendor/dashboard/
+Disallow: /account/
+Disallow: /checkout/
+Disallow: /cart/
+
+Sitemap: https://fancyhub.in/sitemap.xml

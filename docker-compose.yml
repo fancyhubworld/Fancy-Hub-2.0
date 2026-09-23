@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fancyhub_marketplace
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+      - DATABASE_URL=${DATABASE_URL:-file:./dev.db}
+      - NEXT_PUBLIC_APP_NAME=${NEXT_PUBLIC_APP_NAME:-FancyHub.in}
+      - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL:-http://localhost:3000}
+      - JWT_SECRET=${JWT_SECRET:-dummy_local_development_jwt_secret}
+      - API_ENCRYPTION_MASTER_KEY=${API_ENCRYPTION_MASTER_KEY:-dummy_local_development_master_key_64_characters_long_0123456789}
+    volumes:
+      - ./prisma/dev.db:/app/prisma/dev.db
