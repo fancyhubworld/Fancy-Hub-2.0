@@ -89,4 +89,3 @@ docker-compose up -d --build
 ## 📄 License & Compliance
 © 2026 FancyHub.in — All Rights Reserved. Built with standard Indian GST compliance, 256-bit SSL encryption, and WCAG 2.2 AA accessibility guidelines.
 # Fancy-Hub-2.0
-# Fancy-Hub-2.0
